@@ -17,17 +17,10 @@ then visit `http://localhost:8000/`. Any editor live-reload extension (e.g. VS C
 ## Project structure
 
 ```
-├── index.html         — the CV page
-├── projects.html      — the projects page
+├── index.html       — the page itself (single-page CV)
 ├── css/
-│   └── style.css      — design tokens (incl. dark mode), layout, components
-├── js/
-│   └── main.js         — progressive enhancement: theme toggle, scroll-reveal,
-│                          scrollspy, back-to-top (page works fully without it)
-├── assets/
-│   ├── photo.jpg       — portrait used in the header
-│   └── favicon.svg     — browser tab icon
-├── README.md           — this file
+│   └── style.css     — all styling: colors, type scale, layout, responsive rules
+├── README.md         — this file
 └── .gitignore
 ```
 
@@ -39,11 +32,12 @@ then visit `http://localhost:8000/`. Any editor live-reload extension (e.g. VS C
 2. **Retheme.** Colors, fonts, spacing, and the content width are all defined as CSS custom
    properties at the top of `css/style.css` (inside `:root`). Change values there rather than
    hunting through individual rules.
-3. **Swap the photo.** Replace `assets/photo.jpg` with your own image (same filename, or
-   update the `<img>` `src` inside `.avatar-wrap` in `index.html`). Keep the `alt` text
-   descriptive (e.g. "Portrait of Jane Doe"), not "photo" or empty.
-4. **Update the social links.** GitHub/LinkedIn URLs appear in a few places — the nav bar
-   and footer of both pages — search for `github.com` / `linkedin.com` to find them all.
+3. **Add a photo (optional).** Create an `assets/` folder, drop your image in (e.g.
+   `assets/photo.jpg`), then add near the top of the `<header>` in `index.html`:
+   ```html
+   <img src="assets/photo.jpg" alt="Portrait of Your Name" width="120" height="120">
+   ```
+   Use a descriptive `alt` value (e.g. "Portrait of Jane Doe"), not "photo" or an empty string.
 
 ## Deploy (GitHub Pages)
 
@@ -63,12 +57,10 @@ To go live:
    "Deploy from a branch", **Branch** = `main`, folder = `/ (root)`.
 3. Wait a minute or two, then check `https://wuytsw.github.io/`.
 
-## Already included
-
-- Favicon, light/dark mode toggle (persisted, respects OS preference), a
-  print/PDF-friendly stylesheet, GitHub/LinkedIn links, and a real photo.
-
 ## Ideas for later (not included yet)
 
-- Resume/CV as a downloadable PDF
-- Analytics (e.g. a privacy-friendly option like Plausible)
+- Favicon
+- Light/dark mode toggle
+- Print/PDF-friendly stylesheet
+- Social links (GitHub, LinkedIn, etc.)
+- A real photo in `assets/`

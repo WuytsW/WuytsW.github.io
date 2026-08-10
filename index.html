@@ -2,256 +2,115 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <script>document.documentElement.classList.add('js');</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Willem Wuyts — Software Engineer</title>
-  <meta name="description" content="Personal CV of Willem Wuyts, MSc Electronics &amp; ICT Engineering student focused on software systems, LLM agents, and NLP.">
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f8fb">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#090c16">
-
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Willem Wuyts — Software Engineer">
-  <meta property="og:description" content="Personal CV of Willem Wuyts, MSc Electronics &amp; ICT Engineering student focused on software systems, LLM agents, and NLP.">
-  <meta property="og:url" content="https://wuytsw.github.io/">
-  <meta property="og:image" content="https://wuytsw.github.io/assets/photo.jpg">
-  <meta name="twitter:card" content="summary">
-
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-
+  <title>Willem Wuyts</title>
+  <meta name="description" content="Personal CV of Willem Wuyts.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <div class="bg-decor" aria-hidden="true"></div>
-
-  <nav class="site-nav">
-    <div class="nav-inner">
-      <a class="nav-brand" href="index.html">Willem<span>Wuyts</span></a>
-
-      <details class="nav-details">
-        <summary class="nav-toggle" aria-label="Toggle menu">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-        </summary>
-        <ul class="nav-menu">
-          <li><a href="#about" data-section="about">About</a></li>
-          <li><a href="#experience" data-section="experience">Experience</a></li>
-          <li><a href="#education" data-section="education">Education</a></li>
-          <li><a href="#skills" data-section="skills">Skills</a></li>
-          <li><a href="projects.html">Projects</a></li>
-        </ul>
-      </details>
-
-      <div class="nav-actions">
-        <a class="nav-icon-link" href="https://github.com/WuytsW" target="_blank" rel="noopener" aria-label="Willem's GitHub profile">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.03a9.5 9.5 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
-        </a>
-        <a class="nav-icon-link" href="https://www.linkedin.com/in/willem-wuyts-400473408" target="_blank" rel="noopener" aria-label="Willem's LinkedIn profile">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
-        </a>
-        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </button>
-      </div>
-    </div>
-  </nav>
 
   <!-- TODO: replace with your real name, title, and contact details -->
-  <header class="hero">
-    <div class="hero-inner">
-      <div class="avatar-wrap reveal">
-        <span class="avatar-ring">
-          <img class="avatar" src="assets/photo.jpg" alt="Portrait of Willem Wuyts" width="168" height="168">
-        </span>
-      </div>
-      <div class="hero-text reveal">
-        <p class="eyebrow">MSc Electronics &amp; ICT Engineering</p>
-        <h1>Willem Wuyts</h1>
-        <p class="tagline">Software systems, LLM agents &amp; NLP.</p>
+  <header>
+    <h1>Willem Wuyts</h1>
+    <div class="header-body">
+      <img class="avatar" src="assets/photo.jpg" alt="Portrait of Willem Wuyts" width="180" height="180">
+      <div class="header-info">
         <ul class="contact">
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-            <a href="mailto:wuytswillem@gmail.com">wuytswillem@gmail.com</a>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L14 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 2 6a2 2 0 0 1 2-2z"/></svg>
-            <a href="tel:+32484983024">+32 484 98 30 24</a>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-7.58 7-12.5A7 7 0 0 0 5 9.5C5 14.42 12 22 12 22z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
-            Duffel, Belgium
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-7.58 7-12.5A7 7 0 0 0 5 9.5C5 14.42 12 22 12 22z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
-            Leuven, Belgium
-          </li>
+          <li><a href="mailto:wuytswillem@gmail.com">wuytswillem@gmail.com</a></li>
+          <li><a href="tel:+32484983024">+32 484 98 30 24</a></li>
+          <li><a href='https://github.com/WuytsW'>GitHub</a></li>
+          <li><a href='https://www.linkedin.com/in/willem-wuyts-400473408'>LinkedIn</a></li>
+          <li>Duffel, Belgium</li>
+          <li>Leuven, Belgium</li>
         </ul>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="projects.html">
-            View my projects
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-          <a class="btn btn-ghost" href="#experience">See experience</a>
-        </div>
       </div>
     </div>
   </header>
 
-  <main id="main">
-    <div class="container">
+  <main>
 
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About me</h2>
       <!-- TODO: replace with your real summary -->
-      <section id="about" aria-labelledby="about-heading">
-        <div class="section-heading">
-          <span class="icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
-          </span>
-          <h2 id="about-heading">About me</h2>
-          <span class="rule" aria-hidden="true"></span>
+      <p>
+        I am a master in Electronics and ICT Engineering Technology at the Catholic University of Leuven, with a focus on software systems.
+        I have experience in Python, C++, Java, and JavaScript, and I am particularly interested in LLM agents and NLP. I am looking for a job where I can apply my skills and continue to learn and grow as a software engineer.
+      </p>
+    </section>
+
+    <section id="experience" aria-labelledby="experience-heading">
+      <h2 id="experience-heading">Experience</h2>
+
+      <!-- TODO: fill in group name/location, and write your own bullet points -->
+      <div class="entry">
+        <div class="entry-header">
+          <h3>Scouting</h3>
+          <p class="meta">2008 – 2025</p>
         </div>
-        <div class="about-card reveal">
-          <p>
-            I am a master in Electronics and ICT Engineering Technology at the Catholic University of Leuven, with a focus on software systems.
-            I have experience in Python, C++, Java, and JavaScript, and I am particularly interested in LLM agents and NLP. I am looking for a job where I can apply my skills and continue to learn and grow as a software engineer.
-          </p>
-        </div>
-      </section>
+        <p class="meta">Scouts en Gidsen Duffel-West</p>
 
-      <section id="experience" aria-labelledby="experience-heading">
-        <div class="section-heading">
-          <span class="icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg>
-          </span>
-          <h2 id="experience-heading">Experience</h2>
-          <span class="rule" aria-hidden="true"></span>
-        </div>
-
-        <div class="timeline">
-
-          <!-- TODO: fill in group name/location, and write your own bullet points -->
-          <div class="entry reveal">
-            <span class="entry-marker"><span class="dot"></span></span>
-            <div class="entry-content">
-              <div class="entry-header">
-                <h3>Scouting</h3>
-                <p class="date-pill">2008 – 2025</p>
-              </div>
-              <p class="meta org">Scouts en Gidsen Duffel-West</p>
-
-              <ul>
-                <li>
-                  <strong>5 years as leader</strong> — responsible for organizing and leading activities for a group of children and teenagers.
-                  I learned how to work as part of a team, how to communicate effectively, and how to manage my time and resources.
-                  I also developed my leadership skills and learned how to motivate and inspire others, and helped organize fundraising activities for the scouts.
-                </li>
-                <li>
-                  <strong>1 year as head leader</strong> — responsible for overseeing the entire scouts group, including the leaders and the children.
-                  I learned how to manage a team, how to delegate tasks, and how to make decisions. I also learned how to handle conflicts and how to deal with difficult situations.
-                </li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <section id="education" aria-labelledby="education-heading">
-        <div class="section-heading">
-          <span class="icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9 12 4l10 5-10 5-10-5z"/><path d="M6 11v5c0 1.5 2.5 3 6 3s6-1.5 6-3v-5"/></svg>
-          </span>
-          <h2 id="education-heading">Education</h2>
-          <span class="rule" aria-hidden="true"></span>
-        </div>
-
-        <div class="timeline">
-
-          <!-- TODO: replace with your real education entry -->
-          <div class="entry reveal">
-            <span class="entry-marker"><span class="dot"></span></span>
-            <div class="entry-content">
-              <div class="entry-header">
-                <h3>Master of Electronics and ICT Engineering Technology</h3>
-                <p class="date-pill">2021 – 2026</p>
-              </div>
-              <p class="meta org">Group T, Catholic University Leuven</p>
-              <ul>
-                <li>Focus on software systems</li>
-                <li>Thesis: "<a href="https://github.com/WuytsW-KUL/CeT2SAgent" target="_blank" rel="noopener">A Context-Enhanced Text-to-SPARQL Agent</a>"</li>
-                <li>Erasmus exchange semester in Valencia, Spain</li>
-              </ul>
-              <p>
-                This English-taught master's programme (60 ECTS) trains engineers to design, analyse, and implement
-                cutting-edge electronic, information, and communication systems, combining hands-on projects with strong
-                technical foundations. Within the programme, I specialized in cybersecure software systems, building on
-                coursework in embedded systems, human-computer interaction, and signal processing algorithms.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="skills" aria-labelledby="skills-heading">
-        <div class="section-heading">
-          <span class="icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2 2M16 16l2 2M6 18l2-2M16 8l2-2"/></svg>
-          </span>
-          <h2 id="skills-heading">Skills</h2>
-          <span class="rule" aria-hidden="true"></span>
-        </div>
-        <ul class="skills-list reveal-stagger">
-          <li class="reveal">Python</li>
-          <li class="reveal">LLM Agents &amp; NLP</li>
-          <li class="reveal">C++ &amp; Qt</li>
-          <li class="reveal">Java</li>
-          <li class="reveal">JavaScript</li>
-          <li class="reveal">Distributed Systems</li>
-          <li class="reveal">MVC Architecture</li>
-          <li class="reveal">Git / Version Control</li>
+        <ul>
+          <li>5 years as leader</li>
+          As a scouts leader I was responsible for organizing and leading activities for a group of children and teenagers.
+          I learned how to work as part of a team, how to communicate effectively, and how to manage my time and resources.
+          I also developed my leadership skills and learned how to motivate and inspire others.
+          I also had to organize and work on activities to make money for the scouts.
+          <li>1 year as head leader</li>
+          As a head leader I was responsible for overseeing the entire scouts group, including the leaders and the children.
+          I learned how to manage a team, how to delegate tasks, and how to make decisions.
+          I also learned how to handle conflicts and how to deal with difficult situations.
         </ul>
-      </section>
-
-      <div class="btn-row">
-        <a class="btn btn-primary" href="projects.html">
-          View My Projects
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
       </div>
 
+    </section>
+
+    <section id="education" aria-labelledby="education-heading">
+      <h2 id="education-heading">Education</h2>
+
+      <!-- TODO: replace with your real education entry -->
+      <div class="entry">
+        <div class="entry-header">
+          <h3>Master of Electronics and ICT Engineering Technology</h3>
+          <p class="meta">2021 - 2026</p>
+        </div>
+        <p class="meta">Group T, Catholic University Leuven</p>
+        <ul>
+          <li>Focus on software systems</li>
+          <li>Thesis: "<a href="https://github.com/WuytsW-KUL/CeT2SAgent">A Context-Enhanced Text-to-SPARQL Agent</a>"</li>
+          <li>Erasmus exchange semester in Valencia, Spain</li>
+        </ul>
+        <p>
+          This English-taught master's programme (60 ECTS) trains engineers to design, analyse, and implement
+          cutting-edge electronic, information, and communication systems, combining hands-on projects with strong
+          technical foundations. Within the programme, I specialized in cybersecure software systems, building on
+          coursework in embedded systems, human-computer interaction, and signal processing algorithms.
+        </p>
+      </div>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <ul class="skills-list">
+        <li>Python</li>
+        <li>LLM Agents &amp; NLP</li>
+        <li>C++ &amp; Qt</li>
+        <li>Java</li>
+        <li>JavaScript</li>
+        <li>Distributed Systems</li>
+        <li>MVC Architecture</li>
+        <li>Git / Version Control</li>
+      </ul>
+    </section>
+
+    <div class="btn-row">
+      <a class="btn" href="projects.html">View My Projects &rarr;</a>
     </div>
+
   </main>
 
   <footer>
-    <div class="footer-inner">
-      <p class="footer-note">&copy; 2026 Willem Wuyts</p>
-      <ul class="footer-links">
-        <li>
-          <a href="mailto:wuytswillem@gmail.com" aria-label="Email Willem">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/WuytsW" target="_blank" rel="noopener" aria-label="Willem's GitHub profile">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.03a9.5 9.5 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.37.2 2.39.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/willem-wuyts-400473408" target="_blank" rel="noopener" aria-label="Willem's LinkedIn profile">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
-          </a>
-        </li>
-      </ul>
-    </div>
+    <p>&copy; 2026 Willem Wuyts</p>
   </footer>
 
-  <a href="#top" class="back-to-top" aria-label="Back to top">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
-  </a>
-
-  <script src="js/main.js"></script>
 </body>
 </html>
