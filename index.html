@@ -9,19 +9,23 @@
 </head>
 <body>
 
-  <!-- TODO: replace with your real name, title, and contact details -->
+  <!-- TODO: replace with your real name, title and contact details -->
   <header>
-    <h1>Willem Wuyts</h1>
+    <div class="header-top">
+      <h1>Willem Wuyts</h1>
+      <button type="button" id="download-pdf-btn" class="btn no-print">Download PDF</button>
+    </div>
+    <p class="meta">Master in Electronics and ICT Engineering Technology</p>
+    <p class="meta">29 July 2002</p>
     <div class="header-body">
       <img class="avatar" src="assets/photo.jpg" alt="Portrait of Willem Wuyts" width="180" height="180">
       <div class="header-info">
         <ul class="contact">
           <li><a href="mailto:wuytswillem@gmail.com">wuytswillem@gmail.com</a></li>
           <li><a href="tel:+32484983024">+32 484 98 30 24</a></li>
-          <li><a href='https://github.com/WuytsW'>GitHub</a></li>
-          <li><a href='https://www.linkedin.com/in/willem-wuyts-400473408'>LinkedIn</a></li>
+          <li><a href='https://github.com/WuytsW'>GitHub: WuytsW</a></li>
+          <li><a href='https://www.linkedin.com/in/willem-wuyts-400473408'>LinkedIn: Willem Wuyts</a></li>
           <li>Duffel, Belgium</li>
-          <li>Leuven, Belgium</li>
         </ul>
       </div>
     </div>
@@ -34,14 +38,14 @@
       <p>
         Master in Electronics and ICT Engineering Technology with a focus on embedded software development.
         Able to work on an entire integrated project end-to-end, from hardware design to software development, with strong problem-solving skills and a passion for learning new technologies.
-
+        Comfortable working in international, multicultural teams, gained through an Erasmus exchange semester and studying on a campus with a strongly international student community.
       </p>
     </section>
 
     <section id="experience" aria-labelledby="experience-heading">
       <h2 id="experience-heading">Experience</h2>
 
-      <!-- TODO: fill in group name/location, and write your own bullet points -->
+      <!-- TODO: fill in group name/location and write your own bullet points -->
       <div class="entry">
         <div class="entry-header">
           <h3>Scouting</h3>
@@ -50,8 +54,8 @@
         <p class="meta">Scouts en Gidsen Duffel-West</p>
 
         <ul>
-          <li>5 years as leader: planned and ran weekly activities for children and teenagers, building teamwork, and communication skills</li>
-          <li>1 year as head leader: managed the leader team, delegated tasks, and made decisions for the entire group, including conflict resolution</li>
+          <li>5 years as leader: planned and ran weekly activities for children and teenagers, building teamwork and communication skills</li>
+          <li>1 year as head leader: managed the leader team, delegated tasks and made decisions for the entire group, including conflict resolution</li>
         </ul>
       </div>
 
@@ -62,12 +66,12 @@
 
       <div class="entry">
         <div class="entry-header">
-          <h3>Master of Electronics and ICT Engineering Technology</h3>
-          <p class="meta">2024 - 2026</p>
+          <h3>Master of Engineering Technology: Electronics and ICT</h3>
+          <p class="meta">2026</p>
         </div>
         <p class="meta">Group T, KU Leuven</p>
         <ul>
-          <li>Specialization in software systems</li>
+          <li>Specialisation in software systems</li>
           <li>Thesis: "<a href="https://github.com/WuytsW-KUL/CeT2SAgent">A Context-Enhanced Text-to-SPARQL Agent</a>"</li>
           <li>Erasmus exchange semester in Valencia, Spain</li>
         </ul>
@@ -75,7 +79,7 @@
        <div class="entry">
         <div class="entry-header">
           <h3>Bachelor of Engineering Technology</h3>
-          <p class="meta">2021 - 2025</p>
+          <p class="meta">2025</p>
         </div>
         <p class="meta">Group T, KU Leuven</p>
         <ul>
@@ -86,20 +90,41 @@
 
     <section id="skills" aria-labelledby="skills-heading">
       <h2 id="skills-heading">Skills</h2>
-      <ul class="skills-list">
-        <li>Python</li>
-        <li>LLM Agents &amp; NLP</li>
-        <li>C++ &amp; Qt</li>
-        <li>Java</li>
-        <li>JavaScript</li>
-        <li>Distributed Systems</li>
-        <li>MVC Architecture</li>
-        <li>Git / Version Control</li>
-      </ul>
+
+      <div class="skills-group">
+        <h3>Programming Languages &amp; Technologies</h3>
+        <ul class="skills-list">
+          <li>Python</li>
+          <li>C++ &amp; Qt</li>
+          <li>Java</li>
+          <li>JavaScript</li>
+          <li>HTML &amp; CSS</li>
+          <li>SQL</li>
+          <li>Embedded Systems</li>
+          <li>Git / Version Control</li>
+        </ul>
+      </div>
+
+      <div class="skills-group">
+        <h3>Language Skills</h3>
+        <ul class="skills-list">
+          <li>Dutch (native)</li>
+          <li>English (fluent)</li>
+        </ul>
+      </div>
+
+      <div class="skills-group">
+        <h3>Other Skills</h3>
+        <ul class="skills-list">
+          <li>Leadership</li>
+          <li>Teamwork</li>
+          <li>Communication</li>
+        </ul>
+      </div>
     </section>
 
-    <div class="btn-row">
-      <a class="btn" href="projects.html">View My Projects &rarr;</a>
+    <div class="btn-row no-print">
+      <a class="btn" href="projects.html">View My Projects</a>
     </div>
 
   </main>
@@ -107,6 +132,13 @@
   <footer>
     <p>&copy; 2026 Willem Wuyts</p>
   </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/4.2.1/jspdf.umd.min.js"
+    integrity="sha512-plOdviVmws4Y3JAvbnpfKb2hVxKM1lCwsi3vmElYRj+tiDLffZ4FVUj5a8vyKJ9pIgl8JCAHEJ4D1iUKBecswg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+  <script src="js/pdf-assets.js" defer></script>
+  <script src="js/projects-data.js" defer></script>
+  <script src="js/pdf.js" defer></script>
 
 </body>
 </html>

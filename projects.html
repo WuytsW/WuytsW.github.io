@@ -3,79 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects — Willem Wuyts</title>
+  <title>Projects - Willem Wuyts</title>
   <meta name="description" content="School and personal coding projects by Willem Wuyts.">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="page-projects">
 
   <header>
     <h1>Projects</h1>
     <p class="tagline">A selection of school and personal work</p>
-    <p class="contact">
-      <a href="index.html">&larr; Back to CV</a>
+    <p class="contact no-print">
+      <a href="index.html">&larr; Back</a>
     </p>
   </header>
 
   <main>
 
-    <section id="school-projects" aria-labelledby="school-projects-heading">
-      <h2 id="school-projects-heading">School Projects</h2>
-
-      <div class="project-grid">
-
-        <div class="project-card">
-          <h3><a href="https://github.com/WuytsW-KUL/CeT2SAgent" target="_blank" rel="noopener">CeT2SAgent</a></h3>
-          <p>Master's thesis project — a context-enhanced text-to-SPARQL agent (FastAPI + LangGraph) that turns natural-language questions into SPARQL queries against DBpedia and Wikidata.</p>
-          <span class="project-tag">Python</span>
-        </div>
-
-        <div class="project-card">
-          <h3><a href="https://github.com/WuytsW-KUL/Advanced-Programming-Techniques" target="_blank" rel="noopener">Advanced Programming Techniques</a></h3>
-          <p>Group final project for the Advanced Programming Techniques course: a 2D grid-based game built with Qt using an MVC architecture, with enemy AI, health/energy management, and an autoplay mode.</p>
-          <span class="project-tag">C++</span>
-        </div>
-
-        <div class="project-card">
-          <h3><a href="https://github.com/WuytsW-KUL/dsgt" target="_blank" rel="noopener">dsgt</a></h3>
-          <p>Final project for Distributed Systems: a broker service that lets users order a full set of recipe ingredients in one action, checking real-time stock across multiple independent supplier services.</p>
-          <span class="project-tag">Java</span>
-        </div>
-
-        <div class="project-card">
-          <h3><a href="https://github.com/LiamHeynderickx/BattleCommand_EE3" target="_blank" rel="noopener">BattleCommand_EE3</a></h3>
-          <p>Group project for the Engineering Experience 3 course — code and a written paper documenting the project, split across the repo's branches.</p>
-          <span class="project-tag">Group project</span>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="personal-projects" aria-labelledby="personal-projects-heading">
-      <h2 id="personal-projects-heading">Personal Projects</h2>
-
-      <div class="project-grid">
-
-        <div class="project-card">
-          <h3><a href="https://github.com/WuytsW/ChatApp" target="_blank" rel="noopener">ChatApp</a></h3>
-          <p>A simple Java chat application — an experiment in client/server messaging.</p>
-          <span class="project-tag">Java</span>
-        </div>
-
-        <div class="project-card">
-          <h3><a href="https://github.com/WuytsW/Minesweeper" target="_blank" rel="noopener">Minesweeper</a></h3>
-          <p>A simple browser-based Minesweeper clone, built in JavaScript.</p>
-          <span class="project-tag">JavaScript</span>
-        </div>
-
-      </div>
-    </section>
+    <!-- Cards are rendered from js/projects-data.js by js/projects-render.js,
+         so the project list is authored in exactly one place and always
+         matches what the "Download PDF" button (on index.html) includes. -->
+    <div id="projects-root"></div>
+    <noscript>
+      <p>Enable JavaScript to view the project list, or see my repositories directly on
+        <a href="https://github.com/WuytsW">GitHub</a>.</p>
+    </noscript>
 
   </main>
 
   <footer>
     <p>&copy; 2026 Willem Wuyts</p>
   </footer>
+
+  <script src="js/projects-data.js" defer></script>
+  <script src="js/projects-render.js" defer></script>
 
 </body>
 </html>
