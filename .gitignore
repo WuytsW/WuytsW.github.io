@@ -9,6 +9,7 @@ desktop.ini
 # Editor
 .vscode/
 .idea/
+.vs/
 *.swp
 *.swo
 *~
